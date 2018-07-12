@@ -1,4 +1,4 @@
-package pl.akademiakodu.springExample;
+package pl.akademiakodu.springExample.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +40,7 @@ public class Post {
     }
 
     public Post() {
+        posts.add(this);
     }
 
     public Post(String title, String content, String author) {
