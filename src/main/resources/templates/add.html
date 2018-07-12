@@ -2,12 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Blog</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>
-   KaaKaszankakkkaaaaa
-</h1>
-
+<form action="/show" method="get">
+    Tytuł:<br>
+    <input type="text" name="title"><br>
+    Opis:<br>
+    <textarea rows="4" cols="50" name="content">
+    </textarea><br>
+    Nazwa Autora: <br>
+    <input type="text" name="author"><br>
+    <p>
+        <button class="submit">Zapisz</button>
+    </p>
+</form>
 </body>
 </html>
