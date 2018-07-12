@@ -1,10 +1,19 @@
 package pl.akademiakodu.springExample;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Post {
 
-        private String title;
-        private String content;
-        private String author;
+    private String title;
+    private String content;
+    private String author;
+
+    private static List<Post> posts = new ArrayList<>();
+
+    public static List<Post> findAll() {
+        return posts;
+    }
 
     public String getTitle() {
         return title;
@@ -30,16 +39,18 @@ public class Post {
         this.author = author;
     }
 
-    public Post(){}
+    public Post() {
+    }
 
     public Post(String title, String content, String author) {
         this.title = title;
         this.content = content;
         this.author = author;
+        posts.add(this);
     }
 
-    public String toString(){
-        return getAuthor()+" "+getTitle()+" "+getContent();
+    public String toString() {
+        return getAuthor() + " " + getTitle() + " " + getContent();
     }
 }
 

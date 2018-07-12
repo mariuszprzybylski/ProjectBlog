@@ -19,9 +19,15 @@ public class BlogController {
                        @RequestParam String author,
                          ModelMap modelMap) {
 
-        Post post = new Post(title,content,author);
+        Post post = new Post(title, content, author);
         modelMap.put("post", post);
-        return "show"; //jaki plik html ma być wyświetlony
+        return "show";
+
+    }
+        @GetMapping("/all")
+                public String all(ModelMap modelMap){
+        modelMap.put("posts", Post.findAll());
+        return "all";
 
     }
 
